@@ -1,0 +1,54 @@
+@keyframes moveInLeft {
+  0%{/*start*/
+    opacity: 0;
+    transform: translateX(-10rem);  /**/
+  }
+
+
+  80%{
+    transform: translateX(1rem);  /**/
+  }
+  /* 65%{
+       transform: rotate(3deg);  !**!
+   }*/
+
+  100%{/*finish*/
+    opacity: 1;
+    transform: translate(0);  /*reset translation to make it look how it initially looked, in center*/
+
+  }
+}
+
+@keyframes moveInRight {
+  0%{/*start*/
+    opacity: 0;
+    transform: translateX(10rem);  /**/
+  }
+
+  80%{
+    transform: translateX(-.1rem);  /**/
+  }
+  /* 65%{
+       transform: rotate(-3deg);  !**!
+   }*/
+
+  100%{/*finish*/
+    opacity: 1;
+    transform: translate(0);  /*reset translation to make it look how it initially looked, in center*/
+
+  }
+}
+
+@keyframes moveInBottom {
+  0%{/*start*/
+    opacity: 0;
+    transform: translateY(5rem);  /**/
+  }
+
+
+  100%{/*finish*/
+    opacity: 1;
+    transform: translate(0);  /*reset translation to make it look how it initially looked, in center*/
+
+  }
+}

@@ -1,0 +1,61 @@
+.btn{
+  &:link,
+  &:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s; /*slows down the transform, transition state goes on initial elem*/
+    position: relative;
+    font-size: 1.6rem;
+  }
+  &:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2); /*shaodw direction in x,y, blurr color*/
+
+    &::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem .1rem rgba($color-black,.2); /* make shadow smaller when clicked and less blur so it make it seem button is further from user and close to the page*/
+  }
+
+  &--white{
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after{
+      background-color: $color-white;
+      color: $color-grey-dark;
+    }
+  }
+
+  /*create a child button that look exactly like the parent button*/
+  &::after{
+    content: ""; /*must alway include even if empty*/
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute; /*absolute need to have a referance, the referance is the first position with relative postion that it can fine*/
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; /*slows down the transform, transition state goes on initial elem*/
+  }
+
+
+  &--animated{
+    animation: moveInBottom .5s ease-out .7s; /*name,duration timing function, animation delay*/
+    animation-fill-mode: backwards;
+  }
+
+
+
+}
+

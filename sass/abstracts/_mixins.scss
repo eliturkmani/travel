@@ -1,0 +1,8 @@
+@mixin clearFix{
+  /*since float remove the heigh of elem use clear fix hack, append sudo elem after the elem that clear the float*/
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

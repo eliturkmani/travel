@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  height: 95vh; /*at every point the height of this elm should be 95% of the view port height*/
+  background-image: linear-gradient(
+                  to right bottom,
+                  rgba($color-primary-light,0.8),
+                  rgba($color-primary-dark,0.8)),
+  url(../img/hero.jpg);
+  background-size: cover; /*fit elem in box*/
+  background-position: top; /*sets the starting position of a background image to top*/
+  clip-path: polygon(0 0, 100% 0 ,100% 75vh,0 100%); /*cut the image in these coordinate*/
+
+  &__logo-box{
+    position: absolute;
+    top: 4rem; /*these are in respect to the parent elem*/
+    left: 4rem;
+  }
+
+  &__logo{
+    height: 3.5rem;
+  }
+
+  &__text-box{
+    position: absolute;
+    top: 40%; /*in relation to parent elem*/
+    left: 50%; /*in relation to parent elem*/
+    transform: translate(-50%,-50%);  /*in relation to itself make the center the anchor*/
+    text-align: center;
+  }
+}

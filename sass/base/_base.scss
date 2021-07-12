@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before{
+  margin:0;
+  padding: 0;
+  box-sizing: inherit; /*each elem ingerit bo-sizing from the body tag*/
+}
+
+html{
+  /*font-size: 10px;*/ /*if 10 px is root font size then 1 rem = 10px*/
+  /*using px stops the users to modify the font size from browser setting*/
+  font-size: 62.5%; /*bad practice to use px, by default px is set to 16px but we want 10px so device 16/10*/
+}
+
+body{
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  /* font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-grey-dark;
+  /* padding: 30px;*/ /*30 px padding / 3 and you get 3 rem */
+  padding: 3rem;
+  box-sizing: border-box; /*border width and padding is not added to total width or height*/
+
+}
