@@ -1,4 +1,6 @@
 .btn{
+
+  &, //all link/visited also get applied to button
   &:link,
   &:visited{
 
@@ -10,8 +12,11 @@
     transition: all .2s; /*slows down the transform, transition state goes on initial elem*/
     position: relative;
     font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
+
   }
-  &:hover{
+  &:hover,{
     transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black,.2); /*shaodw direction in x,y, blurr color*/
 
@@ -21,9 +26,11 @@
     }
   }
 
-  &:active{
+  &:active,
+  &:focus{
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem .1rem rgba($color-black,.2); /* make shadow smaller when clicked and less blur so it make it seem button is further from user and close to the page*/
+    outline: none;
   }
 
   &--white{
